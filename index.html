@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yellow to Green</title>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCekGAN7HyNEqpgW_UuJcHhZjNYltu9rs&libraries=places"></script> -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body onload="createMap();">
+    <h1>Yellow to Green</h1> 
+    <div class="row">
+      <div class="primary col"><label>Please enter bus starting location</label>
+        <br>
+        <input type="text" id="origin" size="80" value="Monongalia County Transportation Center"/>
+        <br>
+        <br>
+  
+        <label>Please enter bus stop coordinates or addresses</label>
+        <br>
+        <select id="stop form">
+          <option value="addresses">Street Addresses</option>
+          <option value="coordinates">GPS Coordinates</option>
+        </select>
+        <br>
+        <br>
+        <textarea id="addresses" cols="65" rows="10"></textarea>
+        <br>
+        <br>
+        <label>Please enter destination (school location)</label>
+        <br>
+        <input type="text" id="destination" size="80" value="Morgantown High School"/>
+        <br>
+        <br>
+        <div class="primary col">
+          <button id="run" class="button" onclick="plotPoints('addresses')">Plot Points</button>
+        </div>
+        <div class="secondary col">
+          <div id="optimizeButton"></div>
+        </div>
+        <br>
+        <br></div>
+
+
+      <div class="secondary col"> 
+        <div id="map">Map is here</div>
+        <br>
+        <div id="results and calculations" class="col-container">
+
+          <div class="primary col">
+              <div style="font-size:20px";><strong>Results: </strong>
+                <div id="results" style="font-size:16px"></div>
+              </div>
+            </div>
+    
+            <div class="secondary col">
+              <div style="font-size:20px";><strong>Savings Per Year: </strong>
+                <div id="calculations" style="font-size:16px"></div>
+              </div>
+            </div>
+        </div>
+        <br>
+        <div class="col">
+          <div style="font-size:20px"><strong>New Route: </strong>
+            <div id="new route" style="font-size:16px"></div>
+          </div>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+   
+    
+  </body>
+</html>
