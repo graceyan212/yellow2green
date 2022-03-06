@@ -1,6 +1,5 @@
 let map;
 let waypoints = []; // waypoints in original order
-
 let origin; //start point (transportation center)
 let destination; //end point (school)
 let address_list; // list of all addresses from the text area
